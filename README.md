@@ -1,2 +1,2 @@
-# PingFed-Access-Token-Exchange-Policy
+# Ping Access Token Exchange Policy
  

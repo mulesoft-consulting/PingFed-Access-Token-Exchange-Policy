@@ -1,0 +1,97 @@
+id: Ping access token exchange policy
+name: Ping access token exchange policy
+description: This policy is used to validate and exchange the ping access token for JWT/SAML/Opaque
+category: Custom
+type: custom
+resourceLevelSupported: true
+encryptionSupported: false
+standalone: true
+requiredCharacteristics: []
+providedCharacteristics: []
+configuration:  
+  - propertyName: pingURL
+    name: Ping URL 
+    description: |
+      Ping Access Token URL 
+    type: string
+    optional: false
+    sensitive: false
+    allowMultiple: false
+  - propertyName: clientId
+    name: Client ID 
+    description: |
+      Client ID
+    type: string
+    optional: false
+    sensitive: false
+    allowMultiple: false 
+  - propertyName: clientSecret
+    name: Client Secret 
+    description: |
+      Client Description 
+    type: string
+    optional: false
+    sensitive: true
+    allowMultiple: false 
+  - propertyName: subjectTokenType
+    name: Subject Token Type 
+    description: |
+      The type of token you wish to validate(input) 
+    type: string
+    optional: false
+    sensitive: false
+    allowMultiple: false
+  - propertyName: requestedTokenType
+    name: Requested Token Type 
+    description: |
+      The type of token you wish to exchange for.  
+    type: string
+    optional: false
+    sensitive: false
+    allowMultiple: false
+  - propertyName: resource
+    name: Resource 
+    type: string
+    optional: false
+    sensitive: false
+    allowMultiple: false
+  - propertyName: scope
+    name: Scope    
+    type: string
+    optional: true
+    sensitive: false
+    allowMultiple: false
+  - propertyName: audience
+    name: Audience
+    type: string
+    optional: true
+    sensitive: false
+    allowMultiple: false
+  - propertyName: actorToken
+    name: Actor Token
+    type: string
+    optional: true
+    sensitive: false
+    allowMultiple: false
+  - propertyName: actorTokenType
+    name: Actor Token Type
+    type: string
+    optional: true
+    sensitive: false
+    allowMultiple: false
+  - propertyName: debug
+    name: debug
+    type: boolean
+    optional: true
+    sensitive: false
+    allowMultiple: false
+    description:  |
+      If this flag is set, the incoming wsse:Security header or Authorization: header will be logged for troubleshooting
+  - propertyName: removeToken
+    name: Remove Token
+    type: boolean
+    optional: true
+    sensitive: false
+    allowMultiple: false
+    description: |
+      If this flag is set, the incoming wsse:Security header or Authorization header will be removed after successful validation.
